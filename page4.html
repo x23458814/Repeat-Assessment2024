@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=device-width, intial scale=1.0">
+    <title> Learning Tips </title>
+    <link rel="stylesheet" href="Page4.html">
+<!-- Bootstrap to help structure the homepage -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+     <div class="row">
+        <div class="col-sm-12">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h1 class="card-title">Learning Tips</h5>
+                        <h5 class="card-body">Stress relief with a little minigame!</h5>
+                        <img src="Learning4.jpg" alt="">
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="container fluid"></div>
+    <!-- div for the navigation bar between pages in the top of the homepage -->
+    <ul class="nav">
+        <li class="class-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+        </li>
+        <li class="class-item">
+             
+            <a class="nav-link active"aria-current="page" href="Page2.html">Learning Styles</a>
+        </li>
+        <li class="class-item">
+            <a class="nav-link active" aria-current="page" href="Page3.html">Time Management</a>
+        </li>
+        <li class="class-item">
+            <a class="nav-link active" aria-current="page" href="Page4.html">Minigame</a>
+        </li>
+    </ul>
+
+</body>
+
+    <div class="text-center">
+        <div class="col-sm-12">
+            <h3>Stress relief</h3>
+            <p>Stress relief is essential when studying so this section will serve as a short break while 
+                you improve yourself with the learning tips covered!</p>
+
+           <h5>Have Fun!</h5>
+        </div>
+    </div>
+    <hr>
+
+<title>Start Mini-Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to the Guessing Game</h1>
+<button onclick="startGame()">Start Game</button>
+
+<script type="text/javascript">
+    function startGame() {
+        // as long as conditions are always true, the WHILE LOOP will constantly loop
+        var bTryAgain = true;
+
+        // Somewhere in your JavaScript you should have a secret number stored into a variable
+        var iSecretNumber = Math.floor(Math.random() * 10) + 1;
+
+        // While LOOP repeats prompt until secret number is guessed right
+        while (bTryAgain) {
+            // The user inputs a number STRING into a prompt box
+            var sUserNumber = prompt("Please enter an INTEGER number between 1 and 10!");
+
+            // The STRING is converted into an INTEGER (but not always is successful)
+            var iUserNumberConverted = parseInt(sUserNumber);
+
+            // if the user gets it right, congratulate them
+            if (iUserNumberConverted === iSecretNumber) {
+                // statement to be EXECUTED if the statement is TRUE
+                // congratulate them
+                alert("Congratulations! You've guessed the right number!");
+                bTryAgain = false;
+            } else if (iUserNumberConverted > iSecretNumber) {
+                alert("Sorry, your number is too high!");
+            } else {
+                alert("Sorry, your number is too low!");
+            }
+        }
+
+        // END GAME
+        alert("Game over!");
+    }
+</script>
+
+</body>
+</html>
